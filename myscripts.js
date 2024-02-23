@@ -56,20 +56,24 @@ function playRound(player,computer) {
 
 playGame()*/
 
+//DOM methods
+
 const rock = document.querySelector('#rock');
 const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
+const result = document.querySelector('.results');
+
 
 rock.addEventListener('click', function(e) {
-    alert('Rock!');
-    console.log(playRound('rock',getComputerChoice()));
+    result.textContent = playRound('rock',getComputerChoice()) + ' ' + `Computer = ${computerScore}\nPlayer = ${playerScore}`;
 });
 paper.addEventListener('click', function(e) {
-    alert('Paper!')
-    console.log(playRound('paper',getComputerChoice));
+    result.textContent = playRound('paper',getComputerChoice())+ ' ' + `Computer = ${computerScore}\nPlayer = ${playerScore}`;
 });
 scissors.addEventListener('click', function(e) {
-    alert('Scissors!')
-    console.log(playRound('scissors',getComputerChoice));
+    result.textContent = playRound('scissors',getComputerChoice())+ ' ' + `Computer = ${computerScore}\nPlayer = ${playerScore}`;
 });
-//scissors.addEventListener('click', (e) => playRound('scissors',getComputerChoice));
+
+if (computerScore == 5 || playerScore == 5) {
+    alert(`Game finished! Final score: Computer made ${computerScore} points and Player made ${playerScore} points!`);
+};
