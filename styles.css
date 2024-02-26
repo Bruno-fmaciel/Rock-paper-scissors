@@ -2,5 +2,45 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
-    background-color: gray;
-};
+    background-color: lightcoral;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 6rem;
+    color: lightblue;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+button {
+    border-radius: 50px;
+    height: 50px;
+    width: 200px;
+    background: lightblue;
+}
+
+h1 {
+    font-weight: bold;
+    color: lightblue;
+}
+
+p {
+    background-color: lightblue;
+    color: black;
+
+    padding: 1rem;
+    outline: 2px solid black;
+
+}
+
+.results {
+    background-color: lightblue;
+    color: black;
+   
+    padding: 1rem;
+    outline: 2px solid black;   
+}

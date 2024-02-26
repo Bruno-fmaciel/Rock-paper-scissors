@@ -66,14 +66,32 @@ const result = document.querySelector('.results');
 
 rock.addEventListener('click', function(e) {
     result.textContent = playRound('rock',getComputerChoice()) + ' ' + `Computer = ${computerScore}\nPlayer = ${playerScore}`;
+    if (computerScore == 5 && playerScore < 5 || playerScore == 5 && computerScore < 5) {
+        alert(`Game finished! Final score: Computer made ${computerScore} points and Player made ${playerScore} points!`);
+        alert('Feel free to keep playing if you want.')
+        computerScore = 0;
+        playerScore = 0;
+        result.textContent = playRound('rock',getComputerChoice()) + ' ' + `Computer = ${computerScore}\nPlayer = ${playerScore}`;
+    };
 });
 paper.addEventListener('click', function(e) {
     result.textContent = playRound('paper',getComputerChoice())+ ' ' + `Computer = ${computerScore}\nPlayer = ${playerScore}`;
+    if (computerScore == 5 && playerScore < 5 || playerScore == 5 && computerScore < 5) {
+        alert(`Game finished! Final score: Computer made ${computerScore} points and Player made ${playerScore} points!`);
+        alert('Feel free to keep playing if you want.')
+        computerScore = 0;
+        playerScore = 0;
+        result.textContent = playRound('rock',getComputerChoice()) + ' ' + `Computer = ${computerScore}\nPlayer = ${playerScore}`;
+    };
 });
 scissors.addEventListener('click', function(e) {
     result.textContent = playRound('scissors',getComputerChoice())+ ' ' + `Computer = ${computerScore}\nPlayer = ${playerScore}`;
+    if (computerScore == 5 && playerScore < 5 || playerScore == 5 && computerScore < 5) {
+        alert(`Game finished! Final score: Computer made ${computerScore} points and Player made ${playerScore} points!`);
+        alert('Feel free to keep playing if you want.')
+        computerScore = 0;
+        playerScore = 0;
+        result.textContent = playRound('rock',getComputerChoice()) + ' ' + `Computer = ${computerScore}\nPlayer = ${playerScore}`;
+    };
 });
 
-if (computerScore == 5 || playerScore == 5) {
-    alert(`Game finished! Final score: Computer made ${computerScore} points and Player made ${playerScore} points!`);
-};
