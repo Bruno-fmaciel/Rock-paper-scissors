@@ -38,23 +38,6 @@ function playRound(player,computer) {
     }
 }
 
-/*function playGame() {
-    for (i = 0;i <= 4;i++) {
-        computer = getComputerChoice();
-        player = prompt("Choose! Rock, paper or scissors: ").toLowerCase().trim();
-        console.log(playRound(player,computer));    
-    }
-    console.log(`Player score: ${playerScore}\nComputer score: ${computerScore}`)
-    if (playerScore > computerScore) {
-        console.log("You are the ultimate winner! Congratulations!")
-    }else if (computerScore > playerScore) {
-        console.log("The computer is the ultimate winner! Better luck next time!")   
-    }else {
-        console.log("It's a draw!")
-    }
-}
-
-playGame()*/
 
 //DOM methods
 
@@ -94,4 +77,5 @@ scissors.addEventListener('click', function(e) {
         result.textContent = playRound('rock',getComputerChoice()) + ' ' + `Computer = ${computerScore}\nPlayer = ${playerScore}`;
     };
 });
+
 
